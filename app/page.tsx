@@ -5,11 +5,12 @@ export default function Home() {
     { src: "/blends/app-screenshot-1.png", alt: "Blends event discovery feed on tablet" },
     { src: "/blends/app-screenshot-2.png", alt: "Blends search and filter for college events" },
     { src: "/blends/app-screenshot-3.png", alt: "Blends event details and ticket booking flow" },
-    { src: "/blends/app-screenshot-4.png", alt: "Blends profile and saved events list" },
+    { src: "/blends/app-screenshot-4.png", alt: "Your tickets organised" },
+    { src: "/blends/app-screenshot-5.png", alt: "Blends profile and saved events list" },
   ]
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white relative">
       <a
         href="/blends"
         className="fixed top-6 left-1/2 -translate-x-1/2 z-50 pointer-events-auto"
@@ -23,21 +24,27 @@ export default function Home() {
           decoding="async"
         />
       </a>
-      <InfiniteGallery
-        images={sampleImages}
-        speed={1.2}
-        zSpacing={1.5}
-        visibleCount={4}
-        falloff={{ near: 0.8, far: 14 }}
-        className="h-screen w-full rounded-lg overflow-hidden"
-      />
-      <div className="h-screen inset-0 pointer-events-none fixed flex items-center justify-center text-center px-3 mix-blend-exclusion text-white">
-        <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl tracking-tight text-balance">
+      
+      {/* Gallery layer */}
+      <div className="relative z-0">
+        <InfiniteGallery
+          images={sampleImages}
+          speed={1.2}
+          zSpacing={1.5}
+          visibleCount={4}
+          falloff={{ near: 0.8, far: 14 }}
+          className="h-screen w-full rounded-lg overflow-hidden"
+        />
+      </div>
+
+      {/* Text overlay with blend mode */}
+      <div className="h-screen inset-0 pointer-events-none fixed flex items-center justify-center text-center px-3 z-10 mix-blend-difference">
+        <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl tracking-tight text-balance text-white">
           Never Miss An Oppurtunity Again
         </h1>
       </div>
 
-      <div className="text-center fixed bottom-6 sm:bottom-8 md:bottom-10 left-0 right-0 font-mono uppercase text-[10px] sm:text-[11px] font-semibold px-4">
+      <div className="text-center fixed bottom-6 sm:bottom-8 md:bottom-10 left-0 right-0 font-mono uppercase text-[10px] sm:text-[11px] font-semibold px-4 text-black z-20">
         <p className="hidden sm:block">Use mouse wheel, arrow keys, or touch to navigate</p>
         <p className="opacity-60 text-[9px] sm:text-[11px]">Auto-play resumes after 3 seconds of inactivity</p>
         <a
