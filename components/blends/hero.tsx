@@ -22,7 +22,7 @@ export function Hero() {
         <div className="grid items-center gap-6 sm:gap-8 md:gap-10 grid-cols-1 md:grid-cols-2">
           <div>
             <h1 className="font-serif text-balance text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
-              Never Miss An Oppurtunity Again
+              Never Miss An Opportunity Again
             </h1>
             <p className="mt-3 sm:mt-4 text-pretty text-sm sm:text-base md:text-lg opacity-90">
               See what's happening at your college — and discover events at campuses around you. We also help clubs with

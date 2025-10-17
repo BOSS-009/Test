@@ -40,7 +40,7 @@ export default function Home() {
       {/* Text overlay with blend mode */}
       <div className="h-screen inset-0 pointer-events-none fixed flex items-center justify-center text-center px-3 z-10 mix-blend-difference">
         <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl tracking-tight text-balance text-white">
-          Never Miss An Oppurtunity Again
+          Never Miss An Opportunity Again
         </h1>
       </div>
 
